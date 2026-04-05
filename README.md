@@ -1,0 +1,130 @@
+# FinLens — Financial Intelligence Dashboard
+
+---
+
+## 🚀 Live Preview
+
+Open `index.html` directly in **Google Chrome** (full screen recommended). No build step required — it's a single self-contained HTML file.
+
+---
+
+## ✨ Features
+
+### Dashboard Pages
+
+#### 1. Overview
+- 4 KPI stat cards (Balance, Income, Expenses, Savings Rate) with animated count-up
+- Balance Trend line chart (12-month)
+- Spending Mix donut chart with legend
+- Recent Activity table (last 5 transactions)
+
+#### 2. Transactions
+- Full sortable, filterable, searchable transaction ledger
+- Filter by type (Income/Expense) and category
+- Sort by date or amount
+- Pagination (9 per page)
+- **CSV Export** 
+- Add/Delete transactions (Admin only)
+
+#### 3. Insights
+- Top spending category with animated fill bar
+- Savings rate with motivational context
+- Average transaction value
+- Biggest single expense
+- Monthly comparison bar chart (6 months)
+- Category breakdown with animated horizontal bars
+
+#### 4. Analytics
+- Net cash flow area chart (12-month)
+- Expense distribution radar chart
+- Income sources donut chart
+- Spending heatmap (daily intensity grid for March)
+
+### Role-Based UI
+- **Admin**: Full access — can Add and Delete transactions, sees all actions
+- **Viewer**: Read-only — Add/Delete buttons hidden, no action column
+- Toggle via the role dropdown in the top navigation
+
+### State Management
+- All transaction data persisted to `localStorage` (key: `FLX`)
+- Survives page refresh
+- Synced across all pages instantly
+
+---
+
+## 🛠 Technical Stack
+
+| Technology | Usage |
+|---|---|
+| Vanilla JS (ES6+) | All logic, state, data |
+| GSAP 3.12 + ScrollTrigger | Loader exit, card reveals, parallax |
+| Chart.js 4.4 | All 6 charts (line, bar, doughnut, radar) |
+| HTML5 Canvas | Particle + orb ambient background |
+| CSS Custom Properties | Design tokens, theming |
+| Bebas Neue | Display / heading font |
+| Bricolage Grotesque | Body / UI font |
+| DM Mono | Data / monospace font |
+| localStorage | Data persistence |
+
+---
+
+## 📂 File Structure
+
+```
+finlens/
+├── index.html      ← Complete self-contained app (CSS + JS + HTML)
+└── README.md       ← This file
+```
+
+---
+
+
+## 💡 Design Decisions
+
+- **Single file** — No build toolchain required for evaluation. Paste-and-run.
+- **Scroll snapping** — `scroll-snap-type:y mandatory` gives each section a cinematic full-viewport feel
+- **Dark palette** — `#05050c` near-black base with warm grain noise overlay, matching premium fintech aesthetics
+- **Lime accent** — `#c8ff00` chosen for maximum contrast on dark backgrounds while reading as "positive/growth"
+- **No external images** — All visuals are CSS/Canvas/SVG
+
+---
+
+## 📋 Assignment Requirements Checklist
+
+| Requirement | Status |
+|---|---|
+| Dashboard Overview (Balance, Income, Expenses) | ✅ |
+| Time-based visualization (Balance Trend chart) | ✅ |
+| Categorical visualization (Spending Mix donut) | ✅ |
+| Transactions list with Date, Amount, Category, Type | ✅ |
+| Filtering (by type, category) | ✅ |
+| Sorting (by date, amount) | ✅ |
+| Search | ✅ |
+| Role-based UI (Admin vs Viewer) | ✅ |
+| Insights section (top category, monthly comparison, etc.) | ✅ |
+| State management (localStorage persistence) | ✅ |
+| Responsive design | ✅ |
+| Clean, readable UI | ✅ |
+| Empty/no-data handling | ✅ |
+| Dark mode | ✅ (default) |
+| CSV Export | ✅ |
+| Animations & transitions | ✅ (extensive) |
+
+---
+
+## 🎨 Optional Enhancements Implemented
+
+- ✅ Dark mode (default theme)
+- ✅ Data persistence (localStorage)
+- ✅ Export functionality (CSV with BOM)
+- ✅ Advanced filtering & sorting
+- ✅ Animations & transitions (GSAP, CSS)
+- ✅ Custom cursor
+- ✅ 3D card tilt effects
+- ✅ Magnetic button physics
+- ✅ Particle background system
+- ✅ Scroll-snapped full-viewport sections
+
+---
+
+*FinLens © 2026 — Built with passion for the frontend internship assignment.*
